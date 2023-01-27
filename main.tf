@@ -52,14 +52,8 @@ resource "aws_security_group" "example" {
     protocol  = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
 }
+  
 }
 
-resource "aws_instance" "example" {
-  ami           = "ami-00874d747dde814fa"
-  instance_type = "t2.micro"
-  subnet_id     = aws_subnet.example.id
-  vpc_security_group_ids = [aws_security_group.example.id]
-  key_name = "ansible"
-}
 
 
