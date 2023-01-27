@@ -55,7 +55,7 @@ resource "aws_security_group" "example" {
 }
 
 resource "aws_instance" "example" {
-  ami           = "ami-0aedf6b1cb669b4c7"
+  ami           = "ami-00874d747dde814fa"
   instance_type = "t2.micro"
   subnet_id     = aws_subnet.example.id
   vpc_security_group_ids = [aws_security_group.example.id]
